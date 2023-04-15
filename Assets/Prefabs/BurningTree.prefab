@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e56b6e37c078ed47b6d0e9d9249ea9f, type: 2}
+  - {fileID: 2100000, guid: ddf04d64147c9554abb599717faee560, type: 2}
   - {fileID: 2100000, guid: b0dddf45acfe3a849bd3279942af2126, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 205814739888609900}
   - component: {fileID: 136213828768348902}
   m_Layer: 0
-  m_Name: Burnt
+  m_Name: BurningTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,7 +134,7 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.5533183
+  - screenRelativeHeight: 0.5182102
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23813919065720464}
@@ -232,7 +232,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6b745b25e9f7c6248a1d737ef3889fef, type: 2}
-  - {fileID: 2100000, guid: 7e56b6e37c078ed47b6d0e9d9249ea9f, type: 2}
+  - {fileID: 2100000, guid: 3a9eca39441e7374fae72380d7199caa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -316,7 +316,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 98225dbe7ad919d459a2e204a114c9aa, type: 2}
-  - {fileID: 2100000, guid: 7e56b6e37c078ed47b6d0e9d9249ea9f, type: 2}
+  - {fileID: 2100000, guid: a57be0a2f1b6e85448f4741889886ddd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
