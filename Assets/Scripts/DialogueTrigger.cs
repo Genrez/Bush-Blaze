@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Dialogue dialogue;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private bool canStartDialogue;
+
+	private void Update()
+	{
+		if(canStartDialogue && Input.GetButtonDown("Interact") && DialogueManager.instance.inDialogue == false)
+		{
+			TriggerDialogue();
+		}
+	}
+
+	public void TriggerDialogue()
+	{
+		DialogueManager.instance.StartDialogue(dialogue);
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if(other.gameObject.tag == "Player")
+		{
+			canStartDialogue = true;
+		}
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.tag == "Player")
+		{
+			canStartDialogue = false;
+		}
+	}
 }
