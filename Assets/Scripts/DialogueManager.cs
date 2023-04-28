@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
 	public static DialogueManager instance;
-	public GameObject continueButton;
 
+	public TextMeshProUGUI nameText;
+	public TextMeshProUGUI dialogueText;
+	public GameObject continueButton;
 	public bool inDialogue;
+	public Animator animator;
 
     private Queue<string> sentences;
 	private FirstPersonController player;
@@ -35,7 +39,9 @@ public class DialogueManager : MonoBehaviour
 		inDialogue = true;
 		continueButton.SetActive(true);
 		TriggerPlayerFreeze();
-	
+
+		animator.SetBool("IsOpen", true);
+		nameText.text = dialogue.name;
 		sentences.Clear();
 
 		foreach (string sentence in dialogue.sentences)
@@ -54,7 +60,17 @@ public class DialogueManager : MonoBehaviour
 		}
 
 		string sentence = sentences.Dequeue();
-		Debug.Log(sentence);
+		StartCoroutine(TypeSentence(sentence));
+	}
+
+	IEnumerator TypeSentence(string sentence)
+	{
+		dialogueText.text = "";
+		foreach (char letter in sentence.ToCharArray())
+		{
+			dialogueText.text += letter;
+			yield return new WaitForSeconds(0.02f);
+		}
 	}
 
 	void EndDialogue()
@@ -62,6 +78,8 @@ public class DialogueManager : MonoBehaviour
 		inDialogue = false;
 		continueButton.SetActive(false);
 		TriggerPlayerFreeze();
+		animator.SetBool("IsOpen", false);
+
 		Debug.Log("End of conversation");
 	}
 
