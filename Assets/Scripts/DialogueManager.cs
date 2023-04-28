@@ -60,6 +60,7 @@ public class DialogueManager : MonoBehaviour
 		}
 
 		string sentence = sentences.Dequeue();
+		StopAllCoroutines();
 		StartCoroutine(TypeSentence(sentence));
 	}
 
