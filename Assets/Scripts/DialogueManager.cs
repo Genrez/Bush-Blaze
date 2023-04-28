@@ -80,8 +80,6 @@ public class DialogueManager : MonoBehaviour
 		continueButton.SetActive(false);
 		TriggerPlayerFreeze();
 		animator.SetBool("IsOpen", false);
-
-		Debug.Log("End of conversation");
 	}
 
 	public void TriggerPlayerFreeze()
