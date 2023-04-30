@@ -76,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 3
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -401,7 +401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347164902666831505}
   m_LocalRotation: {x: -0.0029973874, y: -0.023090111, z: 0.00012963593, w: -0.9997289}
-  m_LocalPosition: {x: 2.6452713, y: -3.568472, z: -0.6500015}
+  m_LocalPosition: {x: 2.6452675, y: -3.568472, z: -0.6500015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -576,6 +576,18 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -5462127970485760136, guid: 3c1de1a632a44c849b99fcc9fc49260a, type: 2}
     value: {fileID: 28454302}
+  - key: {fileID: -6486472549022915035, guid: 3c1de1a632a44c849b99fcc9fc49260a, type: 2}
+    value: {fileID: 1632119384}
+  - key: {fileID: 344436488409154385, guid: 3c1de1a632a44c849b99fcc9fc49260a, type: 2}
+    value: {fileID: 6392854624981346755}
+  - key: {fileID: 6717293035585376236, guid: 3c1de1a632a44c849b99fcc9fc49260a, type: 2}
+    value: {fileID: 28454302}
+  - key: {fileID: -1600891551283073017, guid: 3c1de1a632a44c849b99fcc9fc49260a, type: 2}
+    value: {fileID: 28454302}
+  - key: {fileID: 4726556863139023508, guid: 3c1de1a632a44c849b99fcc9fc49260a, type: 2}
+    value: {fileID: 6392854624981346755}
+  - key: {fileID: 847552697376807931, guid: 3c1de1a632a44c849b99fcc9fc49260a, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 14523814efd65df49b6087f0babd12bc: {fileID: 7734086514672141350}
