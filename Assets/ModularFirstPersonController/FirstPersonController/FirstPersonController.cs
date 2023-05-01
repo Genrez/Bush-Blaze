@@ -151,11 +151,6 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        if(lockCursor)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-
         if(crosshair)
         {
             crosshairObject.sprite = crosshairImage;
@@ -202,10 +197,19 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+        if (lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+		}
+		else
+		{
+            Cursor.lockState = CursorLockMode.None;
+		}
+
         #region Camera
 
         // Control camera movement
-        if(cameraCanMove)
+        if (cameraCanMove)
         {
             yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
 
