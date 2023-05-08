@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/InteractiveHub.unity
+    guid: 51d7b868b2befce4880e4096d1dd74b6
+  - enabled: 1
+    path: Assets/Scenes/BurntForest.unity
+    guid: aaf2d26ba608c284783df0a5811bc0f6
+  - enabled: 1
+    path: Assets/Scenes/BurningForest.unity
+    guid: 4722406bd1c400e47890d67f1980ab51
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 105557a017f175844b432021ba641067
+  - enabled: 1
+    path: Assets/Scenes/TitlteScreen.unity
+    guid: f8aaebacbeb031a4c8be02a271c35293
   m_configObjects: {}
