@@ -9,44 +9,55 @@ public class SceneLoader : MonoBehaviour
     public static SceneLoader instance;
     public GameObject loadingScreen;
     public Slider loadingBar;
-    private void Awake()
+    List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
+    float totalSceneProgress;
+
+    private void Awake() 
     {
-        if (instance == null)
-        {
-            instance = this;
-            LoadScenes();
-        }
-        else
-        {
-            Destroy(this);
-        }
+        instance = this;
     }
      
-    List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
     void Start()
     {
         DontDestroyOnLoad(this);
+        DontDestroyOnLoad(loadingScreen);
     }
  
-    void LoadScenes()
+    public void LoadScene(int index)
     {
-        scenesToLoad.Add(SceneManager.LoadSceneAsync((int)forestScenes.InteractiveHub, LoadSceneMode.Additive));
-        scenesToLoad.Add(SceneManager.LoadSceneAsync((int)forestScenes.BurntForest, LoadSceneMode.Additive));
-        scenesToLoad.Add(SceneManager.LoadSceneAsync((int)forestScenes.BurningForest, LoadSceneMode.Additive));
-        scenesToLoad.Add(SceneManager.LoadSceneAsync((int)forestScenes.Forest, LoadSceneMode.Additive));
+        loadingScreen.SetActive(true);
+        scenesToLoad.Add(SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive));
+        StartCoroutine(GetSceneLoadProgress(index));
     }
 
-    void LoadScene(int index)
+    IEnumerator GetSceneLoadProgress(int index)
     {
-        scenesToLoad.Add(SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive));
+        for (int i = 0; i < scenesToLoad.Count; i++)
+        {
+            while (!scenesToLoad[i].isDone)
+            {
+                totalSceneProgress = 0;
+ 
+                foreach (AsyncOperation operation in scenesToLoad)
+                {
+                    totalSceneProgress += operation.progress;
+                }
+ 
+                totalSceneProgress = (totalSceneProgress / scenesToLoad.Count) * 1f;
+                loadingBar.value = Mathf.RoundToInt(totalSceneProgress);
+ 
+                yield return null;
+            }
+        }
+
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(index));
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+        loadingScreen.SetActive(false);
     }
 }
-
-enum forestScenes {
-    //Hub 0
-    //Burnt Forest 1
-    //Burning Forest 2
-    //Forest 3
+     
+enum forestScenes 
+{
     InteractiveHub = 0,
     BurntForest = 1,
     BurningForest = 2,
