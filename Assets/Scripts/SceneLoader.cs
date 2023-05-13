@@ -23,35 +23,21 @@ public class SceneLoader : MonoBehaviour
         DontDestroyOnLoad(loadingScreen);
     }
  
-    public void LoadScene(int index)
+    public void LoadSpecificScene(int index) 
     {
-        loadingScreen.SetActive(true);
-        scenesToLoad.Add(SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive));
-        StartCoroutine(GetSceneLoadProgress(index));
+        StartCoroutine(LoadSceneAsync(index));
     }
 
-    IEnumerator GetSceneLoadProgress(int index)
+    IEnumerator LoadSceneAsync(int index)
     {
-        for (int i = 0; i < scenesToLoad.Count; i++)
+        AsyncOperation operation = SceneManager.LoadSceneAsync(index);
+        loadingScreen.SetActive(true);
+        while (!operation.isDone)
         {
-            while (!scenesToLoad[i].isDone)
-            {
-                totalSceneProgress = 0;
- 
-                foreach (AsyncOperation operation in scenesToLoad)
-                {
-                    totalSceneProgress += operation.progress;
-                }
- 
-                totalSceneProgress = (totalSceneProgress / scenesToLoad.Count) * 1f;
-                loadingBar.value = Mathf.RoundToInt(totalSceneProgress);
- 
-                yield return null;
-            }
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            loadingBar.value = progress;
+            yield return null;
         }
-
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(index));
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         loadingScreen.SetActive(false);
     }
 }
