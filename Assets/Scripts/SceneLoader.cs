@@ -20,7 +20,7 @@ public class SceneLoader : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this);
-        DontDestroyOnLoad(loadingScreen);
+        DontDestroyOnLoad(loadingScreen);  
     }
  
     public void LoadSpecificScene(int index) 
@@ -39,6 +39,26 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
         loadingScreen.SetActive(false);
+    }
+
+    public void LoadSingleScene(int index)
+    {
+        SceneManager.LoadScene(index, LoadSceneMode.Single);
+    }
+
+    public void LoadBurntForest()
+    {
+        SceneManager.LoadScene((int)forestScenes.BurntForest, LoadSceneMode.Single);
+    }
+
+    public void LoadBurningForest()
+    {
+        SceneManager.LoadScene((int)forestScenes.BurningForest, LoadSceneMode.Single);
+    }
+
+    public void LoadForest()
+    {
+        SceneManager.LoadScene((int)forestScenes.Forest, LoadSceneMode.Single);
     }
 }
      
