@@ -790,7 +790,7 @@ Transform:
   - {fileID: 426682792}
   - {fileID: 1985504399}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!320 &969068600496798232
 PlayableDirector:
@@ -810,7 +810,7 @@ PlayableDirector:
   - key: {fileID: -4022386493552793549, guid: fb3688ce54e4d064b838b545d0c331b7, type: 2}
     value: {fileID: 969068599782454589}
   - key: {fileID: -7811670535062704705, guid: fb3688ce54e4d064b838b545d0c331b7, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 5638746564546464098}
   - key: {fileID: 131410420782417403, guid: fb3688ce54e4d064b838b545d0c331b7, type: 2}
     value: {fileID: 969068599782454588}
   - key: {fileID: -4504420444758683750, guid: fb3688ce54e4d064b838b545d0c331b7, type: 2}
