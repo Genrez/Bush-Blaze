@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class SceneLoader : MonoBehaviour
+{
+    public static SceneLoader instance;
+    public GameObject loadingScreen;
+    public Slider loadingBar;
+    List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
+    float totalSceneProgress;
+
+    private void Awake() 
+    {
+        instance = this;
+    }
+     
+    void Start()
+    {
+        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(loadingScreen);
+    }
+ 
+    public void LoadSpecificScene(int index) 
+    {
+        StartCoroutine(LoadSceneAsync(index));
+    }
+
+    IEnumerator LoadSceneAsync(int index)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(index);
+        loadingScreen.SetActive(true);
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            loadingBar.value = progress;
+            yield return null;
+        }
+        loadingScreen.SetActive(false);
+    }
+}
+     
+enum forestScenes 
+{
+    InteractiveHub = 0,
+    BurntForest = 1,
+    BurningForest = 2,
+    Forest = 3,
+    TitleScreen = 4
+} 
