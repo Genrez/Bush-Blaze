@@ -6136,7 +6136,7 @@ PrefabInstance:
     - target: {fileID: 969068600496798232, guid: c7f05d224ce83a64c97a3a06ebefee70, type: 3}
       propertyPath: m_SceneBindings.Array.data[1].value
       value: 
-      objectReference: {fileID: 1600647729}
+      objectReference: {fileID: 969068598394807381}
     - target: {fileID: 969068600496798232, guid: c7f05d224ce83a64c97a3a06ebefee70, type: 3}
       propertyPath: m_SceneBindings.Array.data[8].value
       value: 
@@ -6206,6 +6206,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7f05d224ce83a64c97a3a06ebefee70, type: 3}
+--- !u!95 &969068598394807381 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5638746564546464098, guid: c7f05d224ce83a64c97a3a06ebefee70, type: 3}
+  m_PrefabInstance: {fileID: 969068598394807380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9118190150875953399
 PrefabInstance:
   m_ObjectHideFlags: 0
