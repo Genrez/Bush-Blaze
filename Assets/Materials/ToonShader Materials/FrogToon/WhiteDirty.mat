@@ -63,7 +63,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2ece9a58994c55f48804d305b3bbdc5f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskGloss:
@@ -144,7 +144,7 @@ Material:
     - _GlossTextureSoftness: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HighlightColorPower: 1
+    - _HighlightColorPower: 4
     - _LightAffectOutlineColor: 0
     - _LightAffectRimLightColor: 0
     - _LightAffectShadow: 0
