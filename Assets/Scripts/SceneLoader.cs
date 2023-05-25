@@ -20,7 +20,10 @@ public class SceneLoader : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this);
-        DontDestroyOnLoad(loadingScreen);  
+        if (loadingScreen) 
+        {
+            DontDestroyOnLoad(loadingScreen);  
+        }
     }
  
     public void LoadSpecificScene(int index) 
@@ -59,6 +62,11 @@ public class SceneLoader : MonoBehaviour
     public void LoadForest()
     {
         SceneManager.LoadScene((int)forestScenes.Forest, LoadSceneMode.Single);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
      
