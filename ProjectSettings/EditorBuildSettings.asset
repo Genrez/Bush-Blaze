@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: f8aaebacbeb031a4c8be02a271c35293
+  - enabled: 1
+    path: Assets/Scenes/BurningForest.unity
+    guid: 51ead8c160026c44c88a4b671981018e
   m_configObjects: {}
