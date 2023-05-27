@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &132719331
+--- !u!21 &297507471
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -353,6 +353,8 @@ MonoBehaviour:
     - Did you know that a mouse species in Australia, called Smoky Mouse is critically
       endangered? This is due because of forest fires burning food sources like Fungi
       that they eat.
+    changeSceneAfterDialogue: 0
+    sceneName: 
 --- !u!65 &612032675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -538,6 +540,8 @@ MonoBehaviour:
       our environment.
     - The environment gives us oxygen, agriculture, unique species, and so much more...
       if we were to lose them. Humanity will cease to exist.
+    changeSceneAfterDialogue: 0
+    sceneName: 
 --- !u!135 &756912736
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -557,7 +561,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 10
+  m_Radius: 13
   m_Center: {x: -0.000000015452674, y: 4.278146, z: 0.37315038}
 --- !u!65 &756912737
 BoxCollider:
@@ -990,6 +994,8 @@ MonoBehaviour:
     - I live in the forest. It is my favourite place to be.
     - If this forest were to be gone, who knows where I'll live at.
     - I have a story to tell you. About a great tragedy.
+    changeSceneAfterDialogue: 1
+    sceneName: BurningForest
 --- !u!135 &1215909959
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1009,7 +1015,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 10
+  m_Radius: 11
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!65 &1215909960
 BoxCollider:
@@ -1466,6 +1472,8 @@ MonoBehaviour:
     - Ribbit. Did you know that frog species in Australia such as the Baw Baw and
       Mountain Mist frogs are critically endangered?
     - Ribbit. At this rate, I might also become critically endangered.
+    changeSceneAfterDialogue: 0
+    sceneName: 
 --- !u!135 &1715716477
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1485,7 +1493,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 10
+  m_Radius: 11
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!1001 &1786405607
 PrefabInstance:
@@ -1778,7 +1786,7 @@ MonoBehaviour:
   excludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  _material: {fileID: 132719331}
+  _material: {fileID: 297507471}
 --- !u!4 &2142434001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4459864851310106429, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}

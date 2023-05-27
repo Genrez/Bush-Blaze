@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour
@@ -13,6 +14,9 @@ public class DialogueManager : MonoBehaviour
 	public GameObject continueButton;
 	public bool inDialogue;
 	public Animator animator;
+
+	private bool transitionScene = false;
+	private string sceneName;
 
     private Queue<string> sentences;
 	private FirstPersonController player;
@@ -40,6 +44,12 @@ public class DialogueManager : MonoBehaviour
 		continueButton.SetActive(true);
 		TriggerPlayerFreeze();
 
+		if (dialogue.changeSceneAfterDialogue)
+		{
+			transitionScene = true;
+			sceneName = dialogue.sceneName;
+		}
+		
 		animator.SetBool("IsOpen", true);
 		nameText.text = dialogue.name;
 		sentences.Clear();
@@ -80,7 +90,20 @@ public class DialogueManager : MonoBehaviour
 		continueButton.SetActive(false);
 		TriggerPlayerFreeze();
 		animator.SetBool("IsOpen", false);
+
+		if (transitionScene)
+		{
+			// Add a fade to the scene
+			StartCoroutine(TransitionScene());
+		}
 	}
+
+	IEnumerator TransitionScene()
+	{
+		yield return new WaitForSeconds(2f);
+		SceneManager.LoadScene(sceneName);
+	}
+
 
 	public void TriggerPlayerFreeze()
 	{
