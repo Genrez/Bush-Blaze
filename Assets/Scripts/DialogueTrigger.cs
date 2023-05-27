@@ -37,6 +37,7 @@ public class DialogueTrigger : MonoBehaviour
 	{
 		if(other.gameObject.tag == "Player")
 		{
+			DialogueManager.instance.DisplayInteractDisplay();
 			player = other.transform;
 			canStartDialogue = true;
 		}
@@ -46,6 +47,7 @@ public class DialogueTrigger : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Player")
 		{
+			DialogueManager.instance.HideInteractDisplay();
 			canStartDialogue = false;
 		}
 	}

@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
 	public TextMeshProUGUI nameText;
 	public TextMeshProUGUI dialogueText;
 	public GameObject continueButton;
+	public GameObject interactDisplay;
 	public bool inDialogue;
 	public Animator animator;
 
@@ -33,6 +34,7 @@ public class DialogueManager : MonoBehaviour
 	}
 	private void Start()
 	{
+		interactDisplay.SetActive(false);
 		continueButton.SetActive(false);
 		sentences = new Queue<string>();
 		player = FindObjectOfType<FirstPersonController>();
@@ -43,6 +45,7 @@ public class DialogueManager : MonoBehaviour
 		inDialogue = true;
 		continueButton.SetActive(true);
 		TriggerPlayerFreeze();
+		HideInteractDisplay();
 
 		if (dialogue.changeSceneAfterDialogue)
 		{
@@ -104,7 +107,6 @@ public class DialogueManager : MonoBehaviour
 		SceneManager.LoadScene(sceneName);
 	}
 
-
 	public void TriggerPlayerFreeze()
 	{
 		if (player.playerCanMove == true)
@@ -121,5 +123,15 @@ public class DialogueManager : MonoBehaviour
 			player.lockCursor = true;
 			player.enableHeadBob = true;
 		}
+	}
+
+	public void DisplayInteractDisplay()
+	{
+		interactDisplay.SetActive(true);
+	}
+
+	public void HideInteractDisplay()
+	{
+		interactDisplay.SetActive(false);
 	}
 }
