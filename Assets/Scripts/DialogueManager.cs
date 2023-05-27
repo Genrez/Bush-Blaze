@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
 	public GameObject interactDisplay;
 	public bool inDialogue;
 	public Animator animator;
+	public Animator fadeAnim;
 
 	private bool transitionScene = false;
 	private string sceneName;
@@ -70,6 +71,7 @@ public class DialogueManager : MonoBehaviour
 
 	public void DisplayNextSentence()
 	{
+		Debug.Log("Display Next Sentence");
 		if(sentences.Count == 0)
 		{
 			EndDialogue();
@@ -93,6 +95,7 @@ public class DialogueManager : MonoBehaviour
 
 	void EndDialogue()
 	{
+		Debug.Log("Conversation over");
 		inDialogue = false;
 		continueButton.SetActive(false);
 		TriggerPlayerFreeze();
@@ -100,14 +103,14 @@ public class DialogueManager : MonoBehaviour
 
 		if (transitionScene)
 		{
-			// Add a fade to the scene
+			fadeAnim.SetTrigger("FadeOut");
 			StartCoroutine(TransitionScene());
 		}
 	}
 
 	IEnumerator TransitionScene()
 	{
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(1.8f);
 		SceneManager.LoadScene(sceneName);
 	}
 
