@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour
@@ -11,11 +12,17 @@ public class DialogueManager : MonoBehaviour
 	public TextMeshProUGUI nameText;
 	public TextMeshProUGUI dialogueText;
 	public GameObject continueButton;
+	public GameObject interactDisplay;
 	public bool inDialogue;
 	public Animator animator;
+	public Animator fadeAnim;
+
+	private bool transitionScene = false;
+	private string sceneName;
 
     private Queue<string> sentences;
 	private FirstPersonController player;
+	private Animator interactDisplayAnim;
 
 	private void Awake()
 	{
@@ -32,6 +39,10 @@ public class DialogueManager : MonoBehaviour
 		continueButton.SetActive(false);
 		sentences = new Queue<string>();
 		player = FindObjectOfType<FirstPersonController>();
+		if (interactDisplay)
+		{
+			interactDisplayAnim = interactDisplay.GetComponent<Animator>();
+		}
 	}
 
 	public void StartDialogue(Dialogue dialogue)
@@ -39,7 +50,14 @@ public class DialogueManager : MonoBehaviour
 		inDialogue = true;
 		continueButton.SetActive(true);
 		TriggerPlayerFreeze();
+		HideInteractDisplay();
 
+		if (dialogue.changeSceneAfterDialogue)
+		{
+			transitionScene = true;
+			sceneName = dialogue.sceneName;
+		}
+		
 		animator.SetBool("IsOpen", true);
 		nameText.text = dialogue.name;
 		sentences.Clear();
@@ -53,6 +71,7 @@ public class DialogueManager : MonoBehaviour
 
 	public void DisplayNextSentence()
 	{
+		Debug.Log("Display Next Sentence");
 		if(sentences.Count == 0)
 		{
 			EndDialogue();
@@ -76,10 +95,23 @@ public class DialogueManager : MonoBehaviour
 
 	void EndDialogue()
 	{
+		Debug.Log("Conversation over");
 		inDialogue = false;
 		continueButton.SetActive(false);
 		TriggerPlayerFreeze();
 		animator.SetBool("IsOpen", false);
+
+		if (transitionScene)
+		{
+			fadeAnim.SetTrigger("FadeOut");
+			StartCoroutine(TransitionScene());
+		}
+	}
+
+	IEnumerator TransitionScene()
+	{
+		yield return new WaitForSeconds(1.8f);
+		SceneManager.LoadScene(sceneName);
 	}
 
 	public void TriggerPlayerFreeze()
@@ -98,5 +130,15 @@ public class DialogueManager : MonoBehaviour
 			player.lockCursor = true;
 			player.enableHeadBob = true;
 		}
+	}
+
+	public void DisplayInteractDisplay()
+	{
+		interactDisplayAnim.SetBool("ShowDisplay", true);
+	}
+
+	public void HideInteractDisplay()
+	{
+		interactDisplayAnim.SetBool("ShowDisplay", false);
 	}
 }

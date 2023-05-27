@@ -374,6 +374,8 @@ public class FirstPersonController : MonoBehaviour
 
         if (playerCanMove)
         {
+            rb.drag = 0f;
+
             // Calculate how fast we should be moving
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
@@ -441,6 +443,10 @@ public class FirstPersonController : MonoBehaviour
                 rb.AddForce(velocityChange, ForceMode.VelocityChange);
             }
         }
+		else
+		{
+            rb.drag = 8f;
+		}
 
         #endregion
     }
