@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.70183957, g: 0.780177, b: 0.7678828, a: 1}
+  m_IndirectSpecularColor: {r: 0.7018344, g: 0.78017443, b: 0.76788247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &304045248
+--- !u!21 &132719331
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.1739478
+  m_Radius: 4
   m_Center: {x: 1.5251733e-16, y: 0.5916548, z: -0.062828064}
 --- !u!54 &612032677
 Rigidbody:
@@ -557,7 +557,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 6.341749
+  m_Radius: 10
   m_Center: {x: -0.000000015452674, y: 4.278146, z: 0.37315038}
 --- !u!65 &756912737
 BoxCollider:
@@ -1009,7 +1009,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 5.48
+  m_Radius: 10
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!65 &1215909960
 BoxCollider:
@@ -1485,7 +1485,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 5.48
+  m_Radius: 10
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!1001 &1786405607
 PrefabInstance:
@@ -1778,7 +1778,7 @@ MonoBehaviour:
   excludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  _material: {fileID: 304045248}
+  _material: {fileID: 132719331}
 --- !u!4 &2142434001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4459864851310106429, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
