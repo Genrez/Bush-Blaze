@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 	private FirstPersonController player;
+	private Animator interactDisplayAnim;
 
 	private void Awake()
 	{
@@ -34,10 +35,13 @@ public class DialogueManager : MonoBehaviour
 	}
 	private void Start()
 	{
-		interactDisplay.SetActive(false);
 		continueButton.SetActive(false);
 		sentences = new Queue<string>();
 		player = FindObjectOfType<FirstPersonController>();
+		if (interactDisplay)
+		{
+			interactDisplayAnim = interactDisplay.GetComponent<Animator>();
+		}
 	}
 
 	public void StartDialogue(Dialogue dialogue)
@@ -127,11 +131,11 @@ public class DialogueManager : MonoBehaviour
 
 	public void DisplayInteractDisplay()
 	{
-		interactDisplay.SetActive(true);
+		interactDisplayAnim.SetBool("ShowDisplay", true);
 	}
 
 	public void HideInteractDisplay()
 	{
-		interactDisplay.SetActive(false);
+		interactDisplayAnim.SetBool("ShowDisplay", false);
 	}
 }
