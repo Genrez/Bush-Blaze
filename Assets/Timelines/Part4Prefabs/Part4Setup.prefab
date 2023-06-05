@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115208491}
-  m_LocalRotation: {x: -0.03511811, y: 0.12080904, z: 0.0042766053, w: 0.99204516}
+  m_LocalRotation: {x: -0.0351175, y: 0.12095188, z: 0.0042816624, w: 0.9920278}
   m_LocalPosition: {x: 0.5249996, y: 3.568, z: -6.8428917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -651,7 +651,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103394256}
-  m_LocalRotation: {x: -0.03511811, y: 0.12080904, z: 0.0042766053, w: 0.99204516}
+  m_LocalRotation: {x: -0.0351175, y: 0.12095188, z: 0.0042816624, w: 0.9920278}
   m_LocalPosition: {x: 0.5250015, y: 3.5680008, z: -6.8428917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c5e05bb2fdba64f8cc5d2b79a59644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  index: 2
 --- !u!1 &1743954917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +1125,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743954917}
-  m_LocalRotation: {x: 0.32086924, y: 0.6301134, z: -0.32086927, w: 0.6301134}
+  m_LocalRotation: {x: 0.32086927, y: 0.6301134, z: -0.32086927, w: 0.6301134}
   m_LocalPosition: {x: -8, y: 11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1739,6 +1739,8 @@ PlayableDirector:
     value: {fileID: 7772065500900091385}
   - key: {fileID: -2578992646998629853, guid: 7212f16c41b27a14b9fd5ffd43ea9b4e, type: 2}
     value: {fileID: 6581092603230994028}
+  - key: {fileID: -752871106725364427, guid: 7212f16c41b27a14b9fd5ffd43ea9b4e, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 9f1a631cf14cde442a4a410bf765a419: {fileID: 371685568185468929}
@@ -1772,7 +1774,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7713925844678391079}
-  m_LocalRotation: {x: 0.32086924, y: -0.6301135, z: 0.32086927, w: 0.6301135}
+  m_LocalRotation: {x: 0.32086927, y: -0.6301134, z: 0.32086927, w: 0.6301134}
   m_LocalPosition: {x: 35.587257, y: 7.0258865, z: -50.428}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1917,7 +1919,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3959422975
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

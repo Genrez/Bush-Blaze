@@ -72,9 +72,10 @@ public class SceneLoader : MonoBehaviour
      
 enum forestScenes 
 {
-    InteractiveHub = 0,
-    BurntForest = 1,
-    BurningForest = 2,
-    Forest = 3,
-    TitleScreen = 4
+    TitleScreen = 0,
+    InteractiveHub = 1,
+    BurntForest = 2,
+    BurningForest = 3,
+    Forest = 4,
+    
 } 

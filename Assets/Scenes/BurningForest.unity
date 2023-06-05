@@ -2913,6 +2913,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Part0Setup
       objectReference: {fileID: 0}
+    - target: {fileID: 4183248758820170007, guid: 627a3e78eaabcab47a6d9386a5b9fd0e, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183248758820170007, guid: 627a3e78eaabcab47a6d9386a5b9fd0e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 43412456159479c469202c9df4dceb12, type: 2}
     - target: {fileID: 7223199994587742722, guid: 627a3e78eaabcab47a6d9386a5b9fd0e, type: 3}
       propertyPath: m_RootOrder
       value: 8
