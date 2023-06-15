@@ -30,14 +30,14 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.45
         value: {x: -0.6837846, y: 0.0009293556, z: 0.16860795}
-        inSlope: {x: 0, y: 0.0002787763, z: 0.04650625}
-        outSlope: {x: 0, y: 0.0002787763, z: 0.04650625}
+        inSlope: {x: 0, y: 0.00027583333, z: 0.0460153}
+        outSlope: {x: 0, y: 0.00027583333, z: 0.0460153}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 17.183332
+        time: 17.366667
         value: {x: -0.6837846, y: 0.064242125, z: 10.718366}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -74,7 +74,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 17.183332
+    m_StopTime: 17.366667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -106,14 +106,14 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.45
         value: 0.0009293556
-        inSlope: 0.0002787763
-        outSlope: 0.0002787763
+        inSlope: 0.00027583333
+        outSlope: 0.00027583333
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 17.183332
+        time: 17.366667
         value: 0.064242125
         inSlope: 0
         outSlope: 0
@@ -145,14 +145,14 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.45
         value: 0.16860795
-        inSlope: 0.04650625
-        outSlope: 0.04650625
+        inSlope: 0.0460153
+        outSlope: 0.0460153
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 17.183332
+        time: 17.366667
         value: 10.718366
         inSlope: 0
         outSlope: 0
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 17.541666666666664
+    m_Start: 17.45842531695962
     m_ClipIn: 0
     m_Asset: {fileID: 2844884009947398305}
     m_Duration: 8.770833333333
