@@ -665,6 +665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmokeEffect (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4508696319873668, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -843,15 +847,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4103333903944158, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4103333903944158, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4103333903944158, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4103333903944158, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5929,6 +5933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmokeEffect (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4508696319873668, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6009,6 +6017,10 @@ PrefabInstance:
     - target: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       propertyPath: m_Name
       value: SmokeEffect (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4508696319873668, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       propertyPath: m_RootOrder
@@ -6241,6 +6253,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1226887870994228669, guid: a7e6a473bab1bc24f85d72264e664fa0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226887870994228669, guid: a7e6a473bab1bc24f85d72264e664fa0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475063546582746015, guid: a7e6a473bab1bc24f85d72264e664fa0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -149.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475063546582746016, guid: a7e6a473bab1bc24f85d72264e664fa0, type: 3}
+      propertyPath: m_text
+      value: '- Richard'
+      objectReference: {fileID: 0}
     - target: {fileID: 2475063546582746016, guid: a7e6a473bab1bc24f85d72264e664fa0, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
@@ -6280,6 +6308,15 @@ PrefabInstance:
     - target: {fileID: 2475063547087807172, guid: a7e6a473bab1bc24f85d72264e664fa0, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475063547257060380, guid: a7e6a473bab1bc24f85d72264e664fa0, type: 3}
+      propertyPath: m_text
+      value: '"As the flames of human destruction consume our world, we shall witness
+        the funeral blaze of our apathy, and in its ashes, mourn the demise of our
+        chance for redemption."
+
+
+        "Don''t be a tosser."'
       objectReference: {fileID: 0}
     - target: {fileID: 2475063547257060380, guid: a7e6a473bab1bc24f85d72264e664fa0, type: 3}
       propertyPath: m_fontColor32.rgba
